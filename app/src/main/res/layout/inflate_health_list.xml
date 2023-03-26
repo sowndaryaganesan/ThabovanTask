@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/healthCardView"
+        style="@style/NewViewStyle"
+        android:layout_margin="10dp"
+        cardView:cardCornerRadius="8dp"
+        cardView:cardElevation="8dp">
+
+        <RelativeLayout
+            style="@style/NewViewStyle"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text"
+                style="@style/NewViewStyleLayout"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="text"
+                android:textSize="17sp"
+                android:fontFamily="@font/montserrat_bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcyList"
+                style="@style/NewViewStyle"
+                android:layout_below="@+id/text"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <View
+               style="@style/ViewNewStyle"
+                android:layout_below="@+id/rcyList" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>
